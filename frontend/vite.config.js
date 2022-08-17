@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://todoist-mern-clone.herokuapp.com/",
+        target: "https://todoist-mern-clone.herokuapp.com",
       },
     },
   },
