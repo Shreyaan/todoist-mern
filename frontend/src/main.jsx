@@ -8,7 +8,7 @@ import "./styles/global.scss";
 import getApiBaseUrl from "./utils/getApiBaseUrl";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = getApiBaseUrl();
+axios.defaults.baseURL = "https://todoist-mern-clone.herokuapp.com/"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
