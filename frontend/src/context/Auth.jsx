@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [auth, setAuth] = useState(undefined);
 
   const verifyAuth = async () => {
-    const isLoggedIn = await axios.get(`/api/auth/is_logged_in`);
+    const isLoggedIn = await axios.get(`https://todoist-mern-clone.herokuapp.com/api/auth/is_logged_in`);
     setAuth(isLoggedIn.data);
     return isLoggedIn.data;
   };

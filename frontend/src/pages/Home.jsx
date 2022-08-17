@@ -10,13 +10,13 @@ function Home() {
   const [userData, setUserData] = useState();
   const { verifyAuth } = useAuth();
   // const logout = async () => {
-  //   await axios.get('/api/auth/logout');
+  //   await axios.get('https://todoist-mern-clone.herokuapp.com/api/auth/logout');
   //   verifyAuth();
   // };
 
   const getUserInfo = async () => {
     try {
-      const { data } = await axios.get(`/api/users/me/`);
+      const { data } = await axios.get(`https://todoist-mern-clone.herokuapp.com/api/users/me/`);
       setUserData(data);
     } catch (err) {
       if (err.status === 401) {

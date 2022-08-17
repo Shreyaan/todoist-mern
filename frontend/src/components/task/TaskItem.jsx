@@ -11,7 +11,7 @@ function TaskItem({ task, deleteTask }) {
   const handleCheckboxClick = async () => {
     try {
       setIsLoading(true);
-      await axios.put(`/api/tasks/${task._id}`, {
+      await axios.put(`https://todoist-mern-clone.herokuapp.com/api/tasks/${task._id}`, {
         completed: !isCompleted,
       });
       setIsCompleted(!isCompleted);

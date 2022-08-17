@@ -20,7 +20,7 @@ function Login(props) {
     const email = e.target.email.value;
     const password = e.target.password.value;
     try {
-      await axios.post("/api/auth/login", {
+      await axios.post("https://todoist-mern-clone.herokuapp.com/api/auth/login", {
         email,
         password,
       });

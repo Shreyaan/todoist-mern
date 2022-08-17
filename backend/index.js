@@ -12,7 +12,7 @@ const DB_CONNECTION_URI = process.env.DB_CONNECTION_URI;
 const app = express();
 
 //middleware
-app.use(cors());
+app.use(cors({credentials: true, origin: 'https://todoist-mern.vercel.app/'}));
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(cookieParser());

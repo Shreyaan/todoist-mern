@@ -13,7 +13,7 @@ function Register(props) {
       password: e.target.password.value,
     };
     try {
-      await axios.post(`/api/auth/register`, user);
+      await axios.post(`https://todoist-mern-clone.herokuapp.com/api/auth/register`, user);
       toast.success("Registered successfully");
     } catch (err) {
       console.log(err);

@@ -13,7 +13,7 @@ function TaskList() {
 
   const getTasks = async () => {
     try {
-      const { data } = await axios.get("/api/tasks/all");
+      const { data } = await axios.get("https://todoist-mern-clone.herokuapp.com/api/tasks/all");
       setTaskList(
         data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
       );
@@ -37,7 +37,7 @@ function TaskList() {
       return;
     }
     try {
-      const { data } = await axios.post("/api/tasks/", {
+      const { data } = await axios.post("https://todoist-mern-clone.herokuapp.com/api/tasks/", {
         title: newTask,
       });
       toast.success("New task added");
@@ -51,7 +51,7 @@ function TaskList() {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`/api/tasks/${id}`);
+      await axios.delete(`https://todoist-mern-clone.herokuapp.com/api/tasks/${id}`);
       toast.success("Task deleted");
       setTaskList(taskList.filter((task) => task._id !== id));
     } catch (err) {
