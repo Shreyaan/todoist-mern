@@ -15,6 +15,7 @@ function Register(props) {
     try {
       await axios.post(`https://todoist-mern-clone.herokuapp.com/api/auth/register`, user);
       toast.success("Registered successfully");
+      props.switchForm()
     } catch (err) {
       console.log(err);
       toast.error("Something went wrong");
