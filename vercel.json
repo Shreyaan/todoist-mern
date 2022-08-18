@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/auth", "destination": "/" },
+      { "source": "/edit-profile", "destination": "/" }
+    ]
+  }
